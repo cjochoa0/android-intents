@@ -78,7 +78,7 @@ public class displayActivity extends AppCompatActivity {
 
     public void onEmailClick(View view){
         String emailUri = String.format("mailto:%s",email);
-        Intent intent = new Intent(Intent.ACTION_SEND, Uri.parse(emailUri));
+        Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse(emailUri));
         startActivity(Intent.createChooser(intent, "To complete action choose"));
     }
 }
