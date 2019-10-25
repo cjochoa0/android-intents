@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/firstNameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/first_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/lastNameEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <EditText
+        android:id="@+id/lastNameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="@string/last_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/firstNameEdit"
+        app:layout_constraintStart_toStartOf="@+id/firstNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEdit" />
+
+
+
+    <EditText
+        android:id="@+id/phoneEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:maxLength="@dimen/phoneFormat"
+        android:hint="@string/phone_hint"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/lastNameEdit"
+        app:layout_constraintStart_toStartOf="@+id/lastNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEdit" />
+
+    <EditText
+        android:id="@+id/emailEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/phoneEdit"
+        app:layout_constraintStart_toStartOf="@+id/phoneEdit"
+        app:layout_constraintTop_toBottomOf="@+id/phoneEdit" />
+
+    <EditText
+        android:id="@+id/addressEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:hint="@string/address_hint"
+        app:layout_constraintEnd_toEndOf="@+id/emailEdit"
+        app:layout_constraintStart_toStartOf="@+id/emailEdit"
+        app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
+
+    <EditText
+        android:id="@+id/webEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/website_hint"
+        app:layout_constraintEnd_toEndOf="@+id/addressEdit"
+        app:layout_constraintStart_toStartOf="@+id/addressEdit"
+        app:layout_constraintTop_toBottomOf="@+id/addressEdit" />
+
+    <ImageView
+        android:id="@+id/personImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/firstNameEdit"
+        app:layout_constraintEnd_toStartOf="@+id/firstNameEdit"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/firstNameEdit"
+        app:srcCompat="@drawable/ic_person" />
+
+    <ImageView
+        android:id="@+id/phoneImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneEdit"
+        app:layout_constraintEnd_toStartOf="@+id/phoneEdit"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/phoneEdit"
+        app:srcCompat="@drawable/ic_call" />
+
+    <ImageView
+        android:id="@+id/emailImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/emailEdit"
+        app:layout_constraintEnd_toStartOf="@+id/emailEdit"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emailEdit"
+        app:srcCompat="@drawable/ic_email" />
+
+    <ImageView
+        android:id="@+id/locationImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/addressEdit"
+        app:layout_constraintEnd_toStartOf="@+id/addressEdit"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEdit"
+        app:srcCompat="@drawable/ic_location_on" />
+
+    <ImageView
+        android:id="@+id/webImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/webEdit"
+        app:layout_constraintEnd_toStartOf="@+id/webEdit"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/webEdit"
+        app:srcCompat="@drawable/ic_web" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveContact"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/colorBlue"
+        android:text="@string/save_button_label"
+        android:onClick="onButtonClicked"
+        app:layout_constraintEnd_toEndOf="@+id/webEdit"
+        app:layout_constraintStart_toStartOf="@+id/webEdit"
+        app:layout_constraintTop_toBottomOf="@+id/webEdit" />
+</androidx.constraintlayout.widget.ConstraintLayout>
